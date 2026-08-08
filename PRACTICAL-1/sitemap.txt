@@ -1,0 +1,161 @@
+CHARUSAT STUDENT HUB
+
+├── 1. Home Page
+│   ├── Welcome Message
+│   ├── Student Hub Introduction
+│   ├── Quick Links
+│   │   ├── Login
+│   │   ├── Register
+│   │   ├── Dashboard
+│   │   ├── Student Profile
+│   │   ├── Course Registration
+│   │   ├── Exam Schedule
+│   │   ├── Fees Payment
+│   │   ├── Faculty Details
+│   │   ├── Event Calendar
+│   │   └── Faculty Feedback
+│   ├── Student Services
+│   ├── Notice Board
+│   └── Contact Information
+
+├── 2. Login
+│   ├── Username
+│   ├── Password
+│   ├── Remember Me
+│   ├── Login Button
+│   ├── Forgot Password
+│   └── Create New Account
+
+├── 3. Register Account
+│   ├── First Name
+│   ├── Middle Name
+│   ├── Last Name
+│   ├── Birth Date
+│   ├── Gender
+│   ├── Father's Name
+│   ├── Mother's Name
+│   ├── Contact Number
+│   ├── Email Address
+│   ├── Course
+│   ├── Password
+│   ├── Confirm Password
+│   ├── Register Button
+│   └── Reset Button
+
+├── 4. Forgot Password
+│   ├── Student ID
+│   ├── Email Address
+│   ├── Mobile Number
+│   ├── New Password
+│   ├── Confirm Password
+│   ├── Reset Password Button
+│   └── Back to Login
+
+└── 5. Dashboard
+    ├── Time Table
+    │   ├── Monday
+    │   ├── Tuesday
+    │   ├── Wednesday
+    │   └── Thursday
+    │
+    ├── Attendance
+    │   ├── Web Technology
+    │   ├── Java
+    │   ├── Data Structure
+    │   └── Computer Network
+    │
+    ├── Fees Details
+    │   ├── Total Fees
+    │   ├── Paid Fees
+    │   └── Status
+    │
+    ├── University Result
+    │   ├── Semester
+    │   ├── SGPA
+    │   └── Result
+    │
+    ├── 5.1 Student Profile
+    │   ├── Upload Photo
+    │   ├── First Name
+    │   ├── Middle Name
+    │   ├── Last Name
+    │   ├── Birth Date
+    │   ├── Gender
+    │   ├── Father's Name
+    │   ├── Mother's Name
+    │   ├── Contact Number
+    │   ├── Email Address
+    │   ├── Program
+    │   ├── Semester
+    │   ├── Address
+    │   ├── Hobby
+    │   ├── Save Button
+    │   └── Reset Button
+    │
+    ├── 5.2 Course Registration
+    │   ├── Compulsory Courses
+    │   │   ├── Web Technology
+    │   │   ├── Data Structure
+    │   │   ├── Operating System
+    │   │   └── Computer Network
+    │   ├── Elective Courses
+    │   │   ├── Artificial Intelligence
+    │   │   ├── Joy with Python
+    │   │   ├── DS with Python
+    │   │   └── Cloud Computing
+    │   ├── Register Button
+    │   └── Reset Button
+    │
+    ├── 5.3 Exam Schedule
+    │   ├── Date
+    │   ├── Subject
+    │   ├── Time
+    │   ├── Room Number
+    │   └── Download Schedule
+    │
+    ├── 5.4 Fees Payment
+    │   ├── Student Name
+    │   ├── Student ID
+    │   ├── Institute
+    │   ├── Branch
+    │   ├── Semester
+    │   ├── Fees Amount
+    │   ├── Payment Method
+    │   │   ├── UPI
+    │   │   ├── Card
+    │   │   └── Net Banking
+    │   ├── UPI ID / Account Number
+    │   ├── IFSC Code
+    │   ├── Captcha
+    │   ├── Pay Now Button
+    │   └── Reset Button
+    │
+    ├── 5.5 Event Calendar
+    │   ├── Hackathon
+    │   │   ├── Date
+    │   │   ├── Venue
+    │   │   └── Participate Button
+    │   ├── Sports Day
+    │   │   ├── Date
+    │   │   ├── Venue
+    │   │   └── Participate Button
+    │   ├── Tech Seminar
+    │   │   ├── Date
+    │   │   ├── Venue
+    │   │   └── Participate Button
+    │
+    ├── 5.6 Faculty Details
+    │   ├── Faculty List
+    │   ├── Jay Patel
+    │   ├── Amit Nayak
+    │   ├── Rajesh Patel
+    │   └── View Profile Button
+    │
+    └── 5.7 Faculty Feedback
+        ├── Select Faculty
+        ├── Teaching Style
+        ├── Student Interaction
+        ├── Subject Knowledge
+        ├── Suggestions
+        ├── Submit Button
+        └── Reset Button
