@@ -3,21 +3,26 @@
 
 <head>
     <title>Course Registration</title>
+    <link rel="stylesheet" href="../PRACTICAL-3/course_registration.css">
 </head>
 
 <body>
 
-    <h2>CHARUSAT Student Hub</h2>
+    <div class="topbar">
 
-    <a href="dashboard.html">Dashboard</a> |
-    <a href="profile.html">Profile</a> |
-    <a href="event_calendar.html">Events</a>
+        <h2>CampusCore</h2>
+
+        <a href="dashboard.html">Dashboard</a> |
+        <a href="profile.html">Profile</a> |
+        <a href="event_calendar.html">Events</a>
+
+    </div>
 
     <hr>
 
-    <h1 align="center">Course Registration</h1>
+    <h1>Course Registration</h1>
 
-    <table border="1" align="center" cellpadding="15">
+    <table class="course-table compulsory">
 
         <tr>
             <th colspan="2">Compulsory Courses</th>
@@ -29,12 +34,12 @@
         </tr>
 
         <tr>
-            <td>Data Structure and Algoridham</td>
+            <td>Data Structure and Algorithm</td>
             <td><input type="checkbox" checked></td>
         </tr>
 
         <tr>
-            <td>Descreat Maths</td>
+            <td>Discrete Maths</td>
             <td><input type="checkbox" checked></td>
         </tr>
 
@@ -45,9 +50,7 @@
 
     </table>
 
-    <br><br>
-
-    <table border="1" align="center" cellpadding="15">
+    <table class="course-table elective">
 
         <tr>
             <th colspan="2">Elective Courses</th>
@@ -75,20 +78,16 @@
 
     </table>
 
-    <br>
-
-    <center>
+    <div class="buttons">
         <button>Register</button>
-        <button>Reset</button>
-    </center>
-
-    <br>
+        <button type="reset">Reset</button>
+    </div>
 
     <hr>
 
-    <center>
-        <p>© 2026 Charotar University of Science & Technology. All Rights Reserved</p>
-    </center>
+    <p class="footer">
+        © 2026 Charotar University of Science & Technology. All Rights Reserved
+    </p>
 
 </body>
 
