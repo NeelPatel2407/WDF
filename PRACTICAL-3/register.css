@@ -1,0 +1,152 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background-color:#eaf2f8;
+    color:#333;
+}
+
+.main-table{
+    margin:40px auto 25px;
+    border-collapse:collapse;
+    background-color:white;
+    border:1px solid #9bb8ca;
+    box-shadow:0 2px 8px #c5d1d8;
+}
+
+.main-table td{
+    padding:25px;
+}
+
+.features{
+    width:280px;
+    background-color:#e1eef7;
+    border-right:2px solid #9bb8ca;
+    vertical-align:top;
+}
+
+.features h1{
+    text-align:center;
+    color:#1f5f8b;
+}
+
+.features hr{
+    border:0;
+    border-top:1px solid #9bb8ca;
+}
+
+.features ul{
+    padding-left:25px;
+}
+
+.features li{
+    padding:8px;
+    color:#34566d;
+}
+
+.register-box{
+    width:600px;
+    text-align:center;
+}
+
+.register-box h2{
+    color:#1f5f8b;
+    background-color:#edf6fb;
+    padding:10px;
+    border-radius:5px;
+    margin-top:0;
+}
+
+.register-box hr{
+    border:0;
+    border-top:1px solid #b6cad7;
+}
+
+.form-table{
+    margin:15px auto;
+    border-collapse:collapse;
+}
+
+.form-table tr:nth-child(even){
+    background-color:#f6fafc;
+}
+
+.form-table td{
+    padding:9px;
+}
+
+.form-table td:first-child{
+    text-align:right;
+    font-weight:bold;
+    color:#405766;
+}
+
+.form-table td:last-child{
+    text-align:left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select{
+    width:230px;
+    padding:8px;
+    border:1px solid #9bb8ca;
+    border-radius:4px;
+    background-color:#fff;
+    box-sizing:border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus{
+    border:1px solid #1f7a8c;
+    outline:none;
+    background-color:#f0f9fc;
+}
+
+input[type="radio"]{
+    accent-color:#1f7a8c;
+}
+
+.buttons{
+    text-align:center !important;
+    padding-top:15px !important;
+}
+
+button{
+    padding:9px 22px;
+    margin:5px;
+    border:0;
+    border-radius:4px;
+    background-color:#1f6f9f;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#d4772c;
+}
+
+a{
+    color:#1f6f9f;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+a:hover{
+    color:#d4772c;
+    text-decoration:underline;
+}
+
+.register-box p{
+    color:#555;
+}
+
+.footer{
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}

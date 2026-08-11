@@ -1,0 +1,98 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background-color:#f2f6f9;
+    color:#333;
+}
+
+.topbar{
+    padding:15px 30px;
+    background-color:#ffffff;
+    border-bottom:2px solid #2d6287;
+}
+
+.topbar h2{
+    color:#24527a;
+    display:inline-block;
+    margin-right:40px;
+}
+
+.topbar a{
+    color:#24527a;
+    text-decoration:none;
+    margin:0 5px;
+    font-weight:bold;
+}
+
+.topbar a:hover{
+    color:#c56b2c;
+}
+
+body > hr{
+    border:0;
+    border-top:1px solid #ccd8df;
+}
+
+h1{
+    text-align:center;
+    color:#24527a;
+    margin:28px;
+}
+
+.faculty-table{
+    margin:0 auto 35px;
+    border-collapse:separate;
+    border-spacing:18px;
+}
+
+.faculty-table td{
+    width:250px;
+    padding:20px;
+    text-align:center;
+    vertical-align:top;
+    background-color:#ffffff;
+    border:1px solid #c5d2da;
+    border-radius:7px;
+    box-shadow:0 2px 7px #d5dde2;
+}
+
+.faculty-table td:hover{
+    background-color:#f8fbfd;
+    box-shadow:0 4px 10px #c4d0d7;
+}
+
+.faculty-table img{
+    border-radius:5px;
+    border:3px solid #d5e1e8;
+}
+
+.faculty-table h3{
+    color:#24527a;
+    margin:15px 0;
+}
+
+.faculty-table p{
+    font-size:14px;
+    color:#555;
+    margin:9px 0;
+}
+
+button{
+    padding:9px 18px;
+    margin-top:8px;
+    border:0;
+    border-radius:4px;
+    background-color:#24527a;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#c56b2c;
+}
+
+.footer{
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}

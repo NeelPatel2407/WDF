@@ -1,0 +1,95 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background-color:#eef3f7;
+    color:#333;
+}
+
+.topbar{
+    padding:15px 30px;
+    background-color:white;
+    border-bottom:1px solid #b8c7d1;
+}
+
+.topbar h2{
+    color:#24527a;
+    display:inline-block;
+    margin-right:40px;
+}
+
+.topbar a{
+    color:#24527a;
+    text-decoration:none;
+    margin:0 5px;
+}
+
+.topbar a:hover{
+    color:#d2691e;
+}
+
+body > hr{
+    border:0;
+    border-top:1px solid #b8c7d1;
+}
+
+h1{
+    text-align:center;
+    color:#24527a;
+    margin:25px;
+}
+
+.event-table{
+    margin:0 auto 35px;
+    border-collapse:separate;
+    border-spacing:20px;
+}
+
+.event-table td{
+    width:220px;
+    padding:20px;
+    text-align:center;
+    vertical-align:top;
+    background-color:white;
+    border:1px solid #b8c7d1;
+    border-radius:6px;
+    box-shadow:0 2px 6px #d0d7dc;
+}
+
+.event-table td:hover{
+    background-color:#f2f6f8;
+}
+
+.event-table img{
+    border:3px solid #6fa3c8;
+    border-radius:5px;
+}
+
+.event-table h3{
+    color:#24527a;
+    margin:15px 0;
+}
+
+.event-table p{
+    color:#555;
+    margin:10px;
+}
+
+button{
+    padding:9px 20px;
+    margin-top:8px;
+    border:0;
+    border-radius:4px;
+    background-color:#24527a;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#d2691e;
+}
+
+.footer{
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}
