@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff8f0;
+    font-family: Arial, sans-serif;
+    color: #374151;
+}
+
+.topbar {
+    background: linear-gradient(110deg, #9a3412, #ea580c);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.topbar h2 {
+    color: white;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: .2s;
+}
+
+nav a:hover {
+    background: white;
+    color: #4f46e5;
+}
+
+body > h1 {
+    width: 750px;
+    max-width: 90%;
+    margin: 35px auto 20px;
+    color: #9a3412;
+}
+
+.course-table {
+    width: 750px;
+    max-width: 90%;
+    margin: 0 auto 25px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 7px 22px rgba(234,88,12,.1);
+}
+
+.course-table th {
+    padding: 15px;
+    background: #ea580c;
+    color: white;
+    text-align: left;
+}
+
+.course-table td {
+    padding: 14px;
+    border-bottom: 1px solid #fed7aa;
+}
+
+.course-table td:last-child {
+    width: 100px;
+    text-align: center;
+}
+
+.course-table tr:hover {
+    background: #fff7ed;
+}
+
+.elective th {
+    background: #c2410c;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    padding: 11px 24px;
+    margin: 5px;
+    border: 0;
+    border-radius: 7px;
+    background: #ea580c;
+    color: white;
+}
+
+.buttons button[type="reset"] {
+    background: #94a3b8;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #78716c;
+    font-size: 13px;
+}

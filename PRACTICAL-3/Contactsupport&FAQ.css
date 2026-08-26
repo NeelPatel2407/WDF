@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f0f9ff;
+    font-family: Arial, sans-serif;
+    color: #374151;
+}
+
+.topbar {
+    background: linear-gradient(110deg, #0369a1, #0284c7);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.topbar h2 {
+    margin: 0;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: .2s;
+}
+
+nav a:hover {
+    background: white;
+    color: #4f46e5;
+}
+
+body > h1 {
+    width: 950px;
+    max-width: 90%;
+    margin: 40px auto 22px;
+    color: #0369a1;
+}
+
+.faq-table {
+    width: 950px;
+    max-width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(3,105,161,.1);
+}
+
+.faq-table th {
+    padding: 17px;
+    text-align: left;
+    background: #0284c7;
+    color: white;
+    font-size: 18px;
+}
+
+.faq-table td {
+    padding: 18px;
+    border-bottom: 1px solid #e0f2fe;
+    line-height: 1.6;
+}
+
+.faq-table tr:hover {
+    background: #f0f9ff;
+}
+
+.faq-table b {
+    color: #0369a1;
+}
+
+.contact-title {
+    width: 950px;
+    max-width: 90%;
+    margin: 35px auto 18px;
+    color: #0369a1;
+}
+
+.contact-table {
+    width: 950px;
+    max-width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.contact-table th {
+    padding: 14px;
+    background: #e0f2fe;
+    color: #075985;
+    text-align: left;
+}
+
+.contact-table td {
+    padding: 14px;
+    border-bottom: 1px solid #e0f2fe;
+}
+
+.contact-table td:first-child {
+    width: 30%;
+    font-weight: bold;
+    color: #475569;
+}
+
+.contact-table tr:hover {
+    background: #f0f9ff;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    font-size: 13px;
+}

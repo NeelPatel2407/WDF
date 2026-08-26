@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #effcfb;
+    font-family: Arial, sans-serif;
+    color: #334155;
+}
+
+.topbar {
+    background: linear-gradient(110deg, #115e59, #0f766e);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.topbar h2 {
+    color: white;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: .2s;
+}
+
+nav a:hover {
+    background: white;
+    color: #4f46e5;
+}
+
+body > h1 {
+    width: 950px;
+    max-width: 90%;
+    margin: 40px auto 22px;
+    color: #115e59;
+}
+
+.exam-table {
+    width: 950px;
+    max-width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(13,148,136,.1);
+}
+
+.exam-table th {
+    padding: 15px;
+    background: #0f766e;
+    color: white;
+    text-align: left;
+}
+
+.exam-table td {
+    padding: 14px;
+    border-bottom: 1px solid #ccfbf1;
+}
+
+.exam-table tr:nth-child(even) {
+    background: #f0fdfa;
+}
+
+.exam-table tr:hover {
+    background: #ccfbf1;
+}
+
+.download {
+    width: 950px;
+    max-width: 90%;
+    margin: 22px auto;
+    text-align: right;
+}
+
+.download button {
+    padding: 11px 20px;
+    border: 0;
+    border-radius: 7px;
+    background: #0f766e;
+    color: white;
+}
+
+.download button:hover {
+    background: #115e59;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    font-size: 13px;
+}

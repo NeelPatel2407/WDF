@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0e7ff, #f5f3ff);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-table {
+    width: 900px;
+    max-width: 94%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(67,56,202,.18);
+}
+
+.features {
+    width: 40%;
+    padding: 45px;
+    vertical-align: top;
+    background: linear-gradient(150deg, #4338ca, #6366f1);
+    color: white;
+}
+
+.features h1 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.features p {
+    color: #e0e7ff;
+}
+
+.features hr {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,.3);
+    margin: 25px 0;
+}
+
+.features ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+.login-box {
+    padding: 42px;
+}
+
+.login-box h2 {
+    color: #4338ca;
+    font-size: 28px;
+}
+
+.login-box > p {
+    color: #64748b;
+}
+
+.login-box nav {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.login-box nav a {
+    color: #4338ca;
+    background: #eef2ff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.login-box nav a:hover {
+    background: #4338ca;
+    color: white;
+}
+
+.login-box label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #475569;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px #e0e7ff;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 7px;
+    background: #f97316;
+    color: white;
+    font-size: 15px;
+}
+
+.login-box button:hover {
+    background: #ea580c;
+}
+
+.login-box a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 18px;
+}
