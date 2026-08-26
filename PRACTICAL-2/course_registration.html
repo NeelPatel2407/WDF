@@ -2,93 +2,98 @@
 <html>
 
 <head>
-    <title>Course Registration</title>
+    <title>Course Registration - CampusCore</title>
     <link rel="stylesheet" href="../PRACTICAL-3/course_registration.css">
 </head>
 
 <body>
 
-    <div class="topbar">
+<div class="topbar">
 
-        <h2>CampusCore</h2>
+    <h2>CampusCore</h2>
 
-        <a href="dashboard.html">Dashboard</a> |
-        <a href="profile.html">Profile</a> |
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="exam_schedule.html">Exams</a>
+        <a href="fees_payment.html">Fees</a>
         <a href="event_calendar.html">Events</a>
+        <a href="about_faculty.html">Faculty</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="Contactsupport&FAQ.html">Help & FAQ</a>
+        <a href="Home.html">Logout</a>
+    </nav>
 
-    </div>
+</div>
 
-    <hr>
+<h1>Course Registration</h1>
 
-    <h1>Course Registration</h1>
+<table class="course-table compulsory">
 
-    <table class="course-table compulsory">
+    <tr>
+        <th colspan="2">Compulsory Courses</th>
+    </tr>
 
-        <tr>
-            <th colspan="2">Compulsory Courses</th>
-        </tr>
+    <tr>
+        <td>Web Development Technology</td>
+        <td><input type="checkbox" checked></td>
+    </tr>
 
-        <tr>
-            <td>Web Development Technology</td>
-            <td><input type="checkbox" checked></td>
-        </tr>
+    <tr>
+        <td>Data Structure and Algorithm</td>
+        <td><input type="checkbox" checked></td>
+    </tr>
 
-        <tr>
-            <td>Data Structure and Algorithm</td>
-            <td><input type="checkbox" checked></td>
-        </tr>
+    <tr>
+        <td>Discrete Mathematics</td>
+        <td><input type="checkbox" checked></td>
+    </tr>
 
-        <tr>
-            <td>Discrete Maths</td>
-            <td><input type="checkbox" checked></td>
-        </tr>
+    <tr>
+        <td>Fundamentals of Computer Network</td>
+        <td><input type="checkbox" checked></td>
+    </tr>
 
-        <tr>
-            <td>Fundamentals Computer Network</td>
-            <td><input type="checkbox" checked></td>
-        </tr>
+</table>
 
-    </table>
+<table class="course-table elective">
 
-    <table class="course-table elective">
+    <tr>
+        <th colspan="2">Elective Courses</th>
+    </tr>
 
-        <tr>
-            <th colspan="2">Elective Courses</th>
-        </tr>
+    <tr>
+        <td>Artificial Intelligence</td>
+        <td><input type="radio" name="course"></td>
+    </tr>
 
-        <tr>
-            <td>Artificial Intelligence</td>
-            <td><input type="radio" name="course"></td>
-        </tr>
+    <tr>
+        <td>Joy with Python</td>
+        <td><input type="radio" name="course"></td>
+    </tr>
 
-        <tr>
-            <td>Joy with Python</td>
-            <td><input type="radio" name="course"></td>
-        </tr>
+    <tr>
+        <td>DS with Python</td>
+        <td><input type="radio" name="course"></td>
+    </tr>
 
-        <tr>
-            <td>DS with Python</td>
-            <td><input type="radio" name="course"></td>
-        </tr>
+    <tr>
+        <td>Cloud Computing</td>
+        <td><input type="radio" name="course"></td>
+    </tr>
 
-        <tr>
-            <td>Cloud Computing</td>
-            <td><input type="radio" name="course"></td>
-        </tr>
+</table>
 
-    </table>
+<div class="buttons">
+    <button>Register Courses</button>
+    <button type="reset">Reset</button>
+</div>
 
-    <div class="buttons">
-        <button>Register</button>
-        <button type="reset">Reset</button>
-    </div>
+<p class="footer">
+    © 2026 Charotar University of Science & Technology. All Rights Reserved
+</p>
 
-    <hr>
-
-    <p class="footer">
-        © 2026 Charotar University of Science & Technology. All Rights Reserved
-    </p>
-
+<script src="../PRACTICAL-4/course_registration.js"></script>
 </body>
 
 </html>

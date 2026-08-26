@@ -2,138 +2,149 @@
 <html>
 
 <head>
-    <title>Profile Page</title>
+    <title>Student Profile - CampusCore</title>
     <link rel="stylesheet" href="../PRACTICAL-3/profile.css">
 </head>
 
 <body>
 
-    <div class="topbar">
+<div class="topbar">
 
-        <h2>CampusCore</h2>
+    <h2>CampusCore</h2>
 
-        <a href="dashboard.html">Dashboard</a> |
-        <a href="course_registration.html">Courses</a> |
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="course_registration.html">Courses</a>
+        <a href="exam_schedule.html">Exams</a>
+        <a href="fees_payment.html">Fees</a>
         <a href="event_calendar.html">Events</a>
+        <a href="about_faculty.html">Faculty</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="Contactsupport&FAQ.html">Help & FAQ</a>
+        <a href="Home.html">Logout</a>
+    </nav>
 
-    </div>
+</div>
 
-    <hr>
+<h1>Student Profile</h1>
 
-    <h1>Student Profile</h1>
+<table class="profile-table">
 
-    <table class="profile-table">
+    <tr>
 
-        <tr>
+        <td rowspan="5" class="photo-box">
 
-            <td rowspan="5" class="photo-box">
-                <img src="student.jpg" alt="Student Photo" width="150" height="180">
-                <br><br>
-                <button>Upload Photo</button>
-            </td>
+            <img src="student.jpg" alt="Student Photo" width="150" height="180">
 
-            <td class="label">First Name:</td>
-            <td><input type="text"></td>
+            <br><br>
 
-        </tr>
+            <button>Upload Photo</button>
 
-        <tr>
-            <td class="label">Middle Name:</td>
-            <td><input type="text"></td>
-        </tr>
+        </td>
 
-        <tr>
-            <td class="label">Last Name:</td>
-            <td><input type="text"></td>
-        </tr>
+        <td class="label">First Name:</td>
+        <td><input type="text"></td>
 
-        <tr>
-            <td class="label">Birth Date:</td>
-            <td><input type="date"></td>
-        </tr>
+    </tr>
 
-        <tr>
-            <td class="label">Gender:</td>
-            <td>
-                <input type="radio" name="gender"> Male
-                <input type="radio" name="gender"> Female
-            </td>
-        </tr>
+    <tr>
+        <td class="label">Middle Name:</td>
+        <td><input type="text"></td>
+    </tr>
 
-        <tr>
-            <td class="label">Father's Name:</td>
-            <td colspan="2"><input type="text"></td>
-        </tr>
+    <tr>
+        <td class="label">Last Name:</td>
+        <td><input type="text"></td>
+    </tr>
 
-        <tr>
-            <td class="label">Mother's Name:</td>
-            <td colspan="2"><input type="text"></td>
-        </tr>
+    <tr>
+        <td class="label">Birth Date:</td>
+        <td><input type="date"></td>
+    </tr>
 
-        <tr>
-            <td class="label">Contact No.:</td>
-            <td colspan="2"><input type="text"></td>
-        </tr>
+    <tr>
+        <td class="label">Gender:</td>
+        <td>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </td>
+    </tr>
 
-        <tr>
-            <td class="label">Email:</td>
-            <td colspan="2"><input type="email"></td>
-        </tr>
+    <tr>
+        <td class="label">Father's Name:</td>
+        <td colspan="2"><input type="text"></td>
+    </tr>
 
-        <tr>
-            <td class="label">Program:</td>
-            <td colspan="2">
-                <select>
-                    <option>B.Tech CSE</option>
-                    <option>B.Tech IT</option>
-                    <option>B.Tech CE</option>
-                </select>
-            </td>
-        </tr>
+    <tr>
+        <td class="label">Mother's Name:</td>
+        <td colspan="2"><input type="text"></td>
+    </tr>
 
-        <tr>
-            <td class="label">Semester:</td>
-            <td colspan="2">
-                <select>
-                    <option>Semester 1</option>
-                    <option>Semester 2</option>
-                    <option>Semester 3</option>
-                    <option>Semester 4</option>
-                    <option>Semester 5</option>
-                    <option>Semester 6</option>
-                    <option>Semester 7</option>
-                    <option>Semester 8</option>
-                </select>
-            </td>
-        </tr>
+    <tr>
+        <td class="label">Contact No.:</td>
+        <td colspan="2"><input type="text"></td>
+    </tr>
 
-        <tr>
-            <td class="label">Address:</td>
-            <td colspan="2">
-                <textarea rows="3" cols="40"></textarea>
-            </td>
-        </tr>
+    <tr>
+        <td class="label">Email:</td>
+        <td colspan="2"><input type="email"></td>
+    </tr>
 
-        <tr>
-            <td class="label">Hobby:</td>
-            <td colspan="2"><input type="text"></td>
-        </tr>
+    <tr>
+        <td class="label">Program:</td>
+        <td colspan="2">
+            <select>
+                <option>B.Tech CSE</option>
+                <option>B.Tech IT</option>
+                <option>B.Tech CE</option>
+            </select>
+        </td>
+    </tr>
 
-        <tr>
-            <td colspan="3" class="buttons">
-                <button>Save</button>
-                <button type="reset">Reset</button>
-            </td>
-        </tr>
+    <tr>
+        <td class="label">Semester:</td>
+        <td colspan="2">
+            <select>
+                <option>Semester 1</option>
+                <option>Semester 2</option>
+                <option>Semester 3</option>
+                <option>Semester 4</option>
+                <option>Semester 5</option>
+                <option>Semester 6</option>
+                <option>Semester 7</option>
+                <option>Semester 8</option>
+            </select>
+        </td>
+    </tr>
 
-    </table>
+    <tr>
+        <td class="label">Address:</td>
+        <td colspan="2">
+            <textarea rows="3" cols="40"></textarea>
+        </td>
+    </tr>
 
-    <hr>
+    <tr>
+        <td class="label">Hobby:</td>
+        <td colspan="2"><input type="text"></td>
+    </tr>
 
-    <p class="footer">
-        © 2026 Charotar University of Science & Technology. All Rights Reserved
-    </p>
+    <tr>
+        <td colspan="3" class="buttons">
+            <button>Save</button>
+            <button type="reset">Reset</button>
+        </td>
+    </tr>
 
+</table>
+
+<p class="footer">
+    © 2026 Charotar University of Science & Technology. All Rights Reserved
+</p>
+
+<script src="../PRACTICAL-4/profile.js"></script>
 </body>
 
 </html>

@@ -2,88 +2,93 @@
 <html>
 
 <head>
-    <title>Feedback</title>
+    <title>Faculty Feedback - CampusCore</title>
     <link rel="stylesheet" href="../PRACTICAL-3/feedback.css">
 </head>
 
 <body>
 
-    <div class="topbar">
+<div class="topbar">
 
-        <h2>CampusCore</h2>
+    <h2>CampusCore</h2>
 
-        <a href="dashboard.html">Dashboard</a> |
-        <a href="profile.html">Profile</a> |
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
         <a href="course_registration.html">Courses</a>
+        <a href="exam_schedule.html">Exams</a>
+        <a href="fees_payment.html">Fees</a>
+        <a href="event_calendar.html">Events</a>
+        <a href="about_faculty.html">Faculty</a>
+        <a href="Contactsupport&FAQ.html">Help & FAQ</a>
+        <a href="Home.html">Logout</a>
+    </nav>
 
-    </div>
+</div>
 
-    <hr>
+<h1>Faculty Feedback</h1>
 
-    <h1>Faculty Feedback</h1>
+<table class="feedback-table">
 
-    <table class="feedback-table">
+    <tr>
+        <td>Select Faculty</td>
+        <td>
+            <select>
+                <option>Dr. Amit Nayak</option>
+                <option>Mr. Jay Patel</option>
+                <option>Mr. Rajesh Patel</option>
+            </select>
+        </td>
+    </tr>
 
-        <tr>
-            <td>Select Faculty</td>
-            <td>
-                <select>
-                    <option>Dr. Amit Nayak</option>
-                    <option>Mr. Jay Patel</option>
-                    <option>Mr. Rajesh Patel</option>
-                </select>
-            </td>
-        </tr>
+    <tr>
+        <td>Teaching Style</td>
+        <td>
+            <input type="radio" name="teaching"> Excellent
+            <input type="radio" name="teaching"> Good
+            <input type="radio" name="teaching"> Average
+        </td>
+    </tr>
 
-        <tr>
-            <td>Teaching Style</td>
-            <td>
-                <input type="radio" name="t"> Excellent
-                <input type="radio" name="t"> Good
-                <input type="radio" name="t"> Average
-            </td>
-        </tr>
+    <tr>
+        <td>Student Interaction</td>
+        <td>
+            <input type="radio" name="interaction"> Excellent
+            <input type="radio" name="interaction"> Good
+            <input type="radio" name="interaction"> Average
+        </td>
+    </tr>
 
-        <tr>
-            <td>Student Interaction</td>
-            <td>
-                <input type="radio" name="s"> Excellent
-                <input type="radio" name="s"> Good
-                <input type="radio" name="s"> Average
-            </td>
-        </tr>
+    <tr>
+        <td>Subject Knowledge</td>
+        <td>
+            <input type="radio" name="knowledge"> Excellent
+            <input type="radio" name="knowledge"> Good
+            <input type="radio" name="knowledge"> Average
+        </td>
+    </tr>
 
-        <tr>
-            <td>Subject Knowledge</td>
-            <td>
-                <input type="radio" name="k"> Excellent
-                <input type="radio" name="k"> Good
-                <input type="radio" name="k"> Average
-            </td>
-        </tr>
+    <tr>
+        <td>Suggestions</td>
+        <td>
+            <textarea rows="5"></textarea>
+        </td>
+    </tr>
 
-        <tr>
-            <td>Suggestions</td>
-            <td>
-                <textarea rows="4" cols="30"></textarea>
-            </td>
-        </tr>
+    <tr>
+        <td colspan="2" class="buttons">
+            <button>Submit Feedback</button>
+            <button type="reset">Reset</button>
+        </td>
+    </tr>
 
-        <tr>
-            <td colspan="2" class="buttons">
-                <button>Submit</button>
-                <button type="reset">Reset</button>
-            </td>
-        </tr>
+</table>
 
-    </table>
+<p class="footer">
+    © 2026 Charotar University of Science & Technology. All Rights Reserved
+</p>
 
-    <hr>
-
-    <p class="footer">
-        © 2026 Charotar University of Science & Technology. All Rights Reserved
-    </p>
-
+<script src="../PRACTICAL-4/feedback.js"></script>
 </body>
 
 </html>

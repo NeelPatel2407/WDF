@@ -2,76 +2,84 @@
 <html>
 
 <head>
-    <title>Event Calendar</title>
+    <title>Events - CampusCore</title>
     <link rel="stylesheet" href="../PRACTICAL-3/event_calendar.css">
 </head>
 
 <body>
 
-    <div class="topbar">
+<div class="topbar">
 
-        <h2>CampusCore</h2>
+    <h2>CampusCore</h2>
 
-        <a href="dashboard.html">Dashboard</a> |
-        <a href="profile.html">Profile</a> |
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
         <a href="course_registration.html">Courses</a>
+        <a href="exam_schedule.html">Exams</a>
+        <a href="fees_payment.html">Fees</a>
+        <a href="about_faculty.html">Faculty</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="Contactsupport&FAQ.html">Help & FAQ</a>
+        <a href="Home.html">Logout</a>
+    </nav>
 
-    </div>
+</div>
 
-    <hr>
+<h1>Upcoming Campus Events</h1>
 
-    <h1>Upcoming Events</h1>
+<table class="event-table">
 
-    <table class="event-table">
+    <tr>
 
-        <tr>
+        <td>
 
-            <td>
-                <img src="hackathon.jpg" alt="Hackathon" width="180" height="150">
+            <img src="hackathon.jpg" alt="Hackathon">
 
-                <h3>Hackathon</h3>
+            <h3>Hackathon</h3>
 
-                <p>Date : 15 Aug 2026</p>
+            <p>Date : 15 Aug 2026</p>
+            <p>Venue : DEPSTAR</p>
 
-                <p>Venue : DEPSTAR</p>
+            <button>Participate</button>
 
-                <button>Participate</button>
-            </td>
+        </td>
 
-            <td>
-                <img src="sportsday.jpg" alt="Sports Day" width="180" height="150">
+        <td>
 
-                <h3>Sports Day</h3>
+            <img src="sportsday.jpg" alt="Sports Day">
 
-                <p>Date : 20 Aug 2026</p>
+            <h3>Sports Day</h3>
 
-                <p>Venue : Sports Ground</p>
+            <p>Date : 20 Aug 2026</p>
+            <p>Venue : Sports Ground</p>
 
-                <button>Participate</button>
-            </td>
+            <button>Participate</button>
 
-            <td>
-                <img src="seminar.jpg" alt="Tech Seminar" width="180" height="150">
+        </td>
 
-                <h3>Tech Seminar</h3>
+        <td>
 
-                <p>Date : 28 Aug 2026</p>
+            <img src="seminar.jpg" alt="Tech Seminar">
 
-                <p>Venue : Seminar Hall</p>
+            <h3>Tech Seminar</h3>
 
-                <button>Participate</button>
-            </td>
+            <p>Date : 28 Aug 2026</p>
+            <p>Venue : Seminar Hall</p>
 
-        </tr>
+            <button>Participate</button>
 
-    </table>
+        </td>
 
-    <hr>
+    </tr>
 
-    <p class="footer">
-        © 2026 Charotar University of Science & Technology. All Rights Reserved
-    </p>
+</table>
 
+<p class="footer">
+    © 2026 Charotar University of Science & Technology. All Rights Reserved
+</p>
+
+<script src="../PRACTICAL-4/event_calendar.js"></script>
 </body>
 
 </html>
