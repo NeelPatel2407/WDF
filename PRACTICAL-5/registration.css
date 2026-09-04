@@ -71,10 +71,7 @@ label {
     margin-bottom: 7px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
+input,
 select {
     width: 100%;
     padding: 12px;
@@ -125,12 +122,12 @@ legend {
 }
 
 .radio-label input {
+    width: auto;
     margin-right: 5px;
 }
 
 .terms {
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin: 15px 0 20px;
 }
 
 .terms label {
@@ -138,6 +135,7 @@ legend {
 }
 
 .terms input {
+    width: auto;
     margin-right: 7px;
 }
 
@@ -151,7 +149,7 @@ legend {
 }
 
 #strengthBar {
-    width: 0%;
+    width: 0;
     height: 100%;
     background: #4b3cc4;
     transition: 0.3s;
@@ -204,34 +202,4 @@ footer {
     background: #f1f1f1;
     color: #555;
     font-size: 14px;
-}
-
-@media (max-width: 600px) {
-
-    .container {
-        width: 95%;
-        margin: 15px auto;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    header {
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    .radio-label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
 }

@@ -1,156 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Student Registration - CampusCore</title>
     <link rel="stylesheet" href="registration.css">
 </head>
 
 <body>
-
 <div class="container">
 
-    <header>
-        <h1>CampusCore</h1>
-        <p>CHARUSAT Student Registration</p>
-    </header>
+<header>
+    <h1>CampusCore</h1>
+    <p>CHARUSAT Student Registration</p>
+</header>
 
-    <main>
+<main>
+    <h2>Create Student Account</h2>
 
-        <h2>Create Student Account</h2>
+    <form id="registrationForm" novalidate>
 
-        <form id="registrationForm" novalidate>
+        <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" name="studentId" placeholder="Enter Student ID">
+            <span class="error" id="studentIdError"></span>
+        </div>
 
-            <div class="form-group">
-                <label for="studentId">Student ID</label>
-                <input type="text" id="studentId" name="studentId" placeholder="Enter Student ID">
-                <span class="error" id="studentIdError"></span>
-            </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter first name">
+            <span class="error" id="firstNameError"></span>
+        </div>
 
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Enter first name">
-                <span class="error" id="firstNameError"></span>
-            </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter last name">
+            <span class="error" id="lastNameError"></span>
+        </div>
 
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Enter last name">
-                <span class="error" id="lastNameError"></span>
-            </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address">
+            <span class="error" id="emailError"></span>
+        </div>
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter email address">
-                <span class="error" id="emailError"></span>
-            </div>
+        <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" maxlength="10">
+            <span class="error" id="mobileError"></span>
+        </div>
 
-            <div class="form-group">
-                <label for="mobile">Mobile Number</label>
-                <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" maxlength="10">
-                <span class="error" id="mobileError"></span>
-            </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+            <div class="strength-box"><div id="strengthBar"></div></div>
+            <span id="strengthText"></span>
+            <span class="error" id="passwordError"></span>
+        </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
+            <span class="error" id="confirmPasswordError"></span>
+        </div>
 
-                <input type="password" id="password" name="password" placeholder="Enter password">
+        <div class="form-group">
+            <label for="course">Course</label>
+            <select id="course" name="course">
+                <option value="">Select Course</option>
+                <option value="B.Tech CSE">B.Tech CSE</option>
+                <option value="B.Tech IT">B.Tech IT</option>
+                <option value="B.Tech CE">B.Tech CE</option>
+            </select>
+            <span class="error" id="courseError"></span>
+        </div>
 
-                <div class="strength-box">
-                    <div id="strengthBar"></div>
-                </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <select id="year" name="year">
+                <option value="">Select Year</option>
+                <option value="First Year">First Year</option>
+                <option value="Second Year">Second Year</option>
+                <option value="Third Year">Third Year</option>
+                <option value="Fourth Year">Fourth Year</option>
+            </select>
+            <span class="error" id="yearError"></span>
+        </div>
 
-                <span id="strengthText"></span>
-                <span class="error" id="passwordError"></span>
-            </div>
+        <fieldset>
+            <legend>Gender</legend>
+            <label class="radio-label"><input type="radio" name="gender" value="Male"> Male</label>
+            <label class="radio-label"><input type="radio" name="gender" value="Female"> Female</label>
+            <label class="radio-label"><input type="radio" name="gender" value="Other"> Other</label>
+            <span class="error" id="genderError"></span>
+        </fieldset>
 
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
-                <span class="error" id="confirmPasswordError"></span>
-            </div>
+        <div class="terms">
+            <label>
+                <input type="checkbox" id="terms">
+                I accept the Terms and Conditions
+            </label>
+            <span class="error" id="termsError"></span>
+        </div>
 
-            <div class="form-group">
-                <label for="course">Course</label>
+        <div class="buttons">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </div>
 
-                <select id="course" name="course">
-                    <option value="">Select Course</option>
-                    <option value="B.Tech CSE">B.Tech CSE</option>
-                    <option value="B.Tech IT">B.Tech IT</option>
-                    <option value="B.Tech CE">B.Tech CE</option>
-                </select>
+        <p id="successMessage"></p>
+    </form>
+</main>
 
-                <span class="error" id="courseError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="year">Year</label>
-
-                <select id="year" name="year">
-                    <option value="">Select Year</option>
-                    <option value="First Year">First Year</option>
-                    <option value="Second Year">Second Year</option>
-                    <option value="Third Year">Third Year</option>
-                    <option value="Fourth Year">Fourth Year</option>
-                </select>
-
-                <span class="error" id="yearError"></span>
-            </div>
-
-            <fieldset>
-
-                <legend>Gender</legend>
-
-                <label class="radio-label">
-                    <input type="radio" name="gender" value="Male">
-                    Male
-                </label>
-
-                <label class="radio-label">
-                    <input type="radio" name="gender" value="Female">
-                    Female
-                </label>
-
-                <label class="radio-label">
-                    <input type="radio" name="gender" value="Other">
-                    Other
-                </label>
-
-                <span class="error" id="genderError"></span>
-
-            </fieldset>
-
-            <div class="terms">
-
-                <label>
-                    <input type="checkbox" id="terms">
-                    I accept the Terms and Conditions
-                </label>
-
-                <span class="error" id="termsError"></span>
-
-            </div>
-
-            <div class="buttons">
-                <button type="submit">Register</button>
-                <button type="reset">Reset</button>
-            </div>
-
-            <p id="successMessage"></p>
-
-        </form>
-
-    </main>
-
-    <footer>
-        © 2026 Charotar University of Science & Technology. All Rights Reserved
-    </footer>
+<footer>
+    © 2026 Charotar University of Science & Technology. All Rights Reserved
+</footer>
 
 </div>
 
 <script src="registration.js"></script>
-
 </body>
 </html>
