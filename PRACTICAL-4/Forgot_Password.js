@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmPassword = inputs[4];
 
     const buttons = document.querySelectorAll(".forgot-box button");
+
     const resetButton = buttons[0];
     const cancelButton = buttons[1];
 
@@ -50,8 +51,32 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (newPassword.value.length < 6) {
-            alert("New Password must contain at least 6 characters.");
+        if (newPassword.value.length < 8 || newPassword.value.length > 16) {
+            alert("Password must be between 8 and 16 characters.");
+            newPassword.focus();
+            return;
+        }
+
+        if (!/[A-Z]/.test(newPassword.value)) {
+            alert("Password must contain at least one uppercase letter.");
+            newPassword.focus();
+            return;
+        }
+
+        if (!/[a-z]/.test(newPassword.value)) {
+            alert("Password must contain at least one lowercase letter.");
+            newPassword.focus();
+            return;
+        }
+
+        if (!/[0-9]/.test(newPassword.value)) {
+            alert("Password must contain at least one number.");
+            newPassword.focus();
+            return;
+        }
+
+        if (!/[!@#$%^&*(),.?":{}|<>_\-]/.test(newPassword.value)) {
+            alert("Password must contain at least one special character.");
             newPassword.focus();
             return;
         }
@@ -74,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     cancelButton.addEventListener("click", function () {
+
         studentId.value = "";
         email.value = "";
         mobile.value = "";
@@ -81,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         confirmPassword.value = "";
 
         studentId.focus();
+
     });
 
 });

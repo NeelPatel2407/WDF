@@ -23,23 +23,25 @@ body {
     margin: 0;
 }
 
-.topbar nav {
+nav {
     display: flex;
-    gap: 5px;
     flex-wrap: wrap;
+    gap: 9px;
 }
 
-.topbar nav a {
-    color: #ffedd5;
+nav a {
+    color: white;
     text-decoration: none;
-    padding: 8px 10px;
-    font-size: 13px;
-    border-radius: 6px;
+    padding: 9px 16px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: .2s;
 }
 
-.topbar nav a:hover {
+nav a:hover {
     background: white;
-    color: #c2410c;
+    color: #4f46e5;
 }
 
 body > h1 {

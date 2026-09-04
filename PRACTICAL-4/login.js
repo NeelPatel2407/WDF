@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        if (!/[a-z]/.test(password.value)) {
+            alert("Password must contain at least one lowercase letter.");
+            password.focus();
+            return;
+        }
+
         if (!/[0-9]/.test(password.value)) {
             alert("Password must contain at least one number.");
             password.focus();

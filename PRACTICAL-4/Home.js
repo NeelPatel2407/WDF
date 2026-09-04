@@ -20,11 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     serviceLinks.forEach(function (link) {
         link.addEventListener("click", function () {
+
             const serviceName = link.textContent;
 
             if (serviceName !== "Help & FAQ") {
                 alert("Opening " + serviceName + "...");
             }
+
         });
     });
 
@@ -32,11 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (notice) {
         notice.addEventListener("click", function () {
+
             alert(
                 "Important Notice:\n\n" +
                 "Course registration is currently open. " +
                 "Please complete your registration before the deadline."
             );
+
         });
     }
 
