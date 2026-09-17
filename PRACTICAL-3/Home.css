@@ -20,6 +20,7 @@ body {
 }
 
 header {
+    position: relative;
     padding: 30px 38px;
     background: linear-gradient(120deg, #4338ca, #7c3aed);
     color: white;
@@ -56,6 +57,17 @@ nav a {
 nav a:hover {
     background: white;
     color: #4f46e5;
+}
+
+#weather {
+    position: absolute;
+    top: 30px;
+    right: 38px;
+    text-align: right;
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    font-weight: bold;
 }
 
 main {
@@ -218,6 +230,13 @@ footer {
 
     header {
         padding: 25px 20px;
+    }
+
+    #weather {
+        position: static;
+        margin-top: 20px;
+        text-align: left;
+        font-size: 16px;
     }
 
     .quick-table {

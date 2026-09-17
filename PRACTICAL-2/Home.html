@@ -3,11 +3,22 @@
 <html>
 
 <head>
-
     <title>CampusCore - Student Portal</title>
-
     <link rel="stylesheet" href="../PRACTICAL-3/Home.css">
 
+    <script>
+        fetch("https://api.open-meteo.com/v1/forecast?latitude=22.5963&longitude=72.8202&current=temperature_2m,rain,wind_speed_10m&timezone=auto")
+            .then(response=>response.json())
+            .then(data=>{
+                document.getElementById("weather").innerHTML=
+                    "Temperature: "+data.current.temperature_2m+"°C<br>"+
+                    "Rain: "+data.current.rain+" mm<br>"+
+                    "Wind Speed: "+data.current.wind_speed_10m+" km/h";
+            })
+            .catch(error=>{
+                document.getElementById("weather").innerHTML="Weather data unavailable";
+            });
+    </script>
 </head>
 
 <body>
@@ -29,6 +40,11 @@
             <a href="Contactsupport&FAQ.html">Help & FAQ</a>
 
         </nav>
+
+        <div id="weather">
+            Loading weather...
+        </div>
+        
 
     </header>
 
