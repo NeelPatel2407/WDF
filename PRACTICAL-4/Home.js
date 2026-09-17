@@ -1,60 +1,84 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded",function(){
 
-    const heroHeading = document.querySelector(".hero h2");
+    const heroHeading=document.querySelector(".hero h2");
 
-    if (heroHeading) {
-        heroHeading.addEventListener("click", function () {
+    if(heroHeading){
+
+        heroHeading.addEventListener("click",function(){
+
             alert("Welcome to CampusCore Student Portal!");
+
         });
+
     }
 
-    const statusElements = document.querySelectorAll(".status");
+    const statusElements=document.querySelectorAll(".status");
 
-    statusElements.forEach(function (status) {
-        status.addEventListener("click", function () {
-            alert("Service Status: " + status.textContent);
+    statusElements.forEach(function(status){
+
+        status.addEventListener("click",function(){
+
+            alert("Service Status: "+status.textContent);
+
         });
+
     });
 
-    const serviceLinks = document.querySelectorAll(".quick-table a");
+    const serviceLinks=document.querySelectorAll(".quick-table a");
 
-    serviceLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
+    serviceLinks.forEach(function(link){
 
-            const serviceName = link.textContent;
+        link.addEventListener("click",function(event){
 
-            if (serviceName !== "Help & FAQ") {
-                alert("Opening " + serviceName + "...");
+            const loggedIn=localStorage.getItem("loggedIn");
+
+            if(loggedIn!=="true"){
+
+                event.preventDefault();
+
+                alert("Please login first to access "+link.textContent.trim());
+
+                return;
+
             }
 
+            alert("Opening "+link.textContent.trim()+"...");
+
         });
+
     });
 
-    const notice = document.querySelector(".notice");
+    const notice=document.querySelector(".notice");
 
-    if (notice) {
-        notice.addEventListener("click", function () {
+    if(notice){
+
+        notice.addEventListener("click",function(){
 
             alert(
-                "Important Notice:\n\n" +
-                "Course registration is currently open. " +
+                "Important Notice:\n\n"+
+                "Course registration is currently open. "+
                 "Please complete your registration before the deadline."
             );
 
         });
+
     }
 
-    const cells = document.querySelectorAll(".quick-table td");
+    const cells=document.querySelectorAll(".quick-table td");
 
-    cells.forEach(function (cell) {
+    cells.forEach(function(cell){
 
-        cell.addEventListener("mouseenter", function () {
-            cell.style.transform = "scale(1.03)";
-            cell.style.transition = "0.2s";
+        cell.addEventListener("mouseenter",function(){
+
+            cell.style.transform="scale(1.03)";
+            cell.style.transition="0.2s";
+
         });
 
-        cell.addEventListener("mouseleave", function () {
-            cell.style.transform = "scale(1)";
+        cell.addEventListener("mouseleave",function(){
+
+            cell.style.transform="scale(1)";
+
         });
 
     });
