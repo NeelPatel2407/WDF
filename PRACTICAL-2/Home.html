@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
+
     <title>CampusCore - Student Portal</title>
+
     <link rel="stylesheet" href="../PRACTICAL-3/Home.css">
 
     <script>
+
         fetch("https://api.open-meteo.com/v1/forecast?latitude=22.5963&longitude=72.8202&current=temperature_2m,rain,wind_speed_10m&timezone=auto")
+
             .then(response=>response.json())
+
             .then(data=>{
+
                 document.getElementById("weather").innerHTML=
+
                     "Temperature: "+data.current.temperature_2m+"°C<br>"+
+
                     "Rain: "+data.current.rain+" mm<br>"+
+
                     "Wind Speed: "+data.current.wind_speed_10m+" km/h";
+
             })
+
             .catch(error=>{
+
                 document.getElementById("weather").innerHTML="Weather data unavailable";
+
             });
+
     </script>
+
 </head>
 
 <body>
@@ -42,9 +56,10 @@
         </nav>
 
         <div id="weather">
+
             Loading weather...
+
         </div>
-        
 
     </header>
 
@@ -55,8 +70,11 @@
             <h2>Welcome Back, Student</h2>
 
             <p>
+
                 Manage your academic activities, courses, examinations,
+
                 attendance and campus information from one place.
+
             </p>
 
         </section>
@@ -64,7 +82,9 @@
         <section>
 
             <center>
+
                 <h2>Student Services</h2>
+
             </center>
 
             <table class="quick-table">
@@ -176,7 +196,9 @@
                     <td>Attendance</td>
 
                     <td>
+
                         <span class="status">Available</span>
+
                     </td>
 
                 </tr>
@@ -186,7 +208,9 @@
                     <td>Course Registration</td>
 
                     <td>
+
                         <span class="status">Open</span>
+
                     </td>
 
                 </tr>
@@ -196,7 +220,9 @@
                     <td>Exam Schedule</td>
 
                     <td>
+
                         <span class="status">Available</span>
+
                     </td>
 
                 </tr>
@@ -206,7 +232,9 @@
                     <td>Fees Payment</td>
 
                     <td>
+
                         <span class="status">Online</span>
+
                     </td>
 
                 </tr>
@@ -216,7 +244,9 @@
                     <td>University Result</td>
 
                     <td>
+
                         <span class="status">Published</span>
+
                     </td>
 
                 </tr>
@@ -226,7 +256,9 @@
                     <td>Campus Events</td>
 
                     <td>
+
                         <span class="status">Upcoming</span>
+
                     </td>
 
                 </tr>
@@ -240,8 +272,11 @@
             <h3>Latest Notice</h3>
 
             <p>
+
                 Course registration is currently open. Students are advised
+
                 to complete their registration before the deadline.
+
             </p>
 
         </section>
@@ -251,8 +286,11 @@
     <footer>
 
         <p>
+
             © 2026 Charotar University of Science & Technology.
+
             All Rights Reserved.
+
         </p>
 
     </footer>
