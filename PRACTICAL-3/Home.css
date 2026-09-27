@@ -218,6 +218,102 @@ footer {
     background: #fafafa;
 }
 
+/* Practical 6 */
+
+#search {
+    width: 45%;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+#search:focus {
+    border-color: #6366f1;
+}
+
+#category,
+#sort {
+    padding: 11px 14px;
+    margin-left: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    font-size: 14px;
+    outline: none;
+}
+
+#category:focus,
+#sort:focus {
+    border-color: #6366f1;
+}
+
+button {
+    padding: 11px 16px;
+    margin-left: 6px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+#eventList {
+    margin-top: 20px;
+}
+
+.event-card {
+    margin-bottom: 15px;
+    padding: 18px 20px;
+    background: #f8faff;
+    border: 1px solid #dbe4ff;
+    border-radius: 11px;
+    transition: .2s;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    background: #f1f3ff;
+    box-shadow: 0 7px 18px rgba(79, 70, 229, .1);
+}
+
+.event-card h3 {
+    margin: 0 0 10px;
+    color: #4338ca;
+    font-size: 19px;
+}
+
+.event-card p {
+    margin: 6px 0;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination button {
+    margin: 4px;
+    padding: 8px 13px;
+    background: #eef2ff;
+    color: #4338ca;
+    border: 1px solid #c7d2fe;
+}
+
+#pagination button:hover {
+    background: #4f46e5;
+    color: white;
+}
+
 @media (max-width: 800px) {
     .container {
         width: 94%;
@@ -247,5 +343,20 @@ footer {
         display: block;
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    #search {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    #category,
+    #sort,
+    button {
+        margin: 4px 2px;
+    }
+
+    .event-card {
+        padding: 15px;
     }
 }
