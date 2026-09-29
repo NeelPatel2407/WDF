@@ -4,9 +4,19 @@
 
 body {
     margin: 0;
-    background: #effcf6;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
+        url("charusat.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
-    color: #374151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .topbar {
@@ -108,6 +118,6 @@ body > h1 {
 .footer {
     text-align: center;
     padding: 30px;
-    color: #64748b;
+    color: #08090a;
     font-size: 13px;
 }

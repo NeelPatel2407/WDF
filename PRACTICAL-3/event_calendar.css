@@ -4,9 +4,19 @@
 
 body {
     margin: 0;
-    background: #fff7ed;
-    font-family: Arial,sans-serif;
-    color: #374151;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
+        url("charusat.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .topbar {
@@ -49,6 +59,7 @@ body > h1 {
     max-width: 90%;
     margin: 40px auto 20px;
     color: #9a3412;
+    text-align: center;
 }
 
 .event-table {
@@ -103,6 +114,6 @@ body > h1 {
 .footer {
     text-align: center;
     padding: 30px;
-    color: #78716c;
+    color: #000000;
     font-size: 13px;
 }

@@ -4,7 +4,12 @@
 
 body {
     margin: 0;
-    background: #f8fafc;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), url("charusat.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     color: #334155;
 }
@@ -132,6 +137,6 @@ body > h1 {
 .footer {
     text-align: center;
     padding: 25px;
-    color: #64748b;
+    color: #000000;
     font-size: 13px;
 }

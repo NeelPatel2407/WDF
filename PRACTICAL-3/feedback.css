@@ -4,9 +4,19 @@
 
 body {
     margin: 0;
-    background: #faf5ff;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
+        url("charusat.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
-    color: #374151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .topbar {
@@ -49,6 +59,7 @@ body > h1 {
     max-width: 90%;
     margin: 40px auto 22px;
     color: #7e22ce;
+    text-align: center;
 }
 
 .feedback-table {
@@ -108,6 +119,6 @@ body > h1 {
 .footer {
     text-align: center;
     padding: 30px;
-    color: #64748b;
+    color: #030303;
     font-size: 13px;
 }
