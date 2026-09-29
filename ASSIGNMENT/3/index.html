@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Student Grade Calculator</h1>
+        <p>Enter marks for five subjects to calculate the result.</p>
+    </header>
+
+    <main>
+        <form id="gradeForm">
+
+            <div class="student">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" placeholder="Enter student name">
+                <small id="nameError"></small>
+            </div>
+
+            <h2>Enter Subject Marks</h2>
+
+            <div class="marks">
+                <div class="subject">
+                    <label for="sub1">DSA</label>
+                    <input type="number" id="sub1" min="0" max="100" placeholder="Marks">
+                </div>
+
+                <div class="subject">
+                    <label for="sub2">OOP</label>
+                    <input type="number" id="sub2" min="0" max="100" placeholder="Marks">
+                </div>
+
+                <div class="subject">
+                    <label for="sub3">WDF</label>
+                    <input type="number" id="sub3" min="0" max="100" placeholder="Marks">
+                </div>
+
+                <div class="subject">
+                    <label for="sub4">FCN</label>
+                    <input type="number" id="sub4" min="0" max="100" placeholder="Marks">
+                </div>
+
+                <div class="subject">
+                    <label for="sub5">Maths</label>
+                    <input type="number" id="sub5" min="0" max="100" placeholder="Marks">
+                </div>
+            </div>
+
+            <small id="marksError"></small>
+
+            <button type="submit">Calculate Grade</button>
+
+        </form>
+
+        <section id="result">
+            <h2>Student Result</h2>
+
+            <div class="result-row">
+                <span>Student Name</span>
+                <b id="resultName"></b>
+            </div>
+
+            <div class="result-row">
+                <span>Total Marks</span>
+                <b><span id="total"></span> / 500</b>
+            </div>
+
+            <div class="result-row">
+                <span>Percentage</span>
+                <b><span id="percentage"></span>%</b>
+            </div>
+
+            <div class="result-row">
+                <span>Grade</span>
+                <b id="grade"></b>
+            </div>
+
+            <div class="result-row">
+                <span>Status</span>
+                <b id="status"></b>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Student Grade Calculator using JavaScript
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
