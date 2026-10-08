@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CampusCore - To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Student To-Do List</h1>
+        <p>Manage your daily academic tasks</p>
+    </header>
+
+    <main>
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <button id="addBtn">Add Task</button>
+        </div>
+
+        <p id="error"></p>
+
+        <ul id="taskList"></ul>
+
+        <div class="summary">
+            <span>Total Tasks: <b id="total">0</b></span>
+            <span>Completed: <b id="completed">0</b></span>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 CampusCore Student Portal
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

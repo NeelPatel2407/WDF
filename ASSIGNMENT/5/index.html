@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CampusCore - Student Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Student Result Management</h1>
+        <p>CampusCore Academic Portal</p>
+    </header>
+
+    <main>
+        <div class="form-box">
+            <h2>Enter Student Details</h2>
+
+            <label>Student Name</label>
+            <input type="text" id="name" placeholder="Enter student name">
+
+            <label>Roll Number</label>
+            <input type="text" id="roll" placeholder="Enter roll number">
+
+            <label>Marks</label>
+            <div class="marks">
+                <input type="number" id="dsa" placeholder="DSA">
+                <input type="number" id="oop" placeholder="OOP">
+                <input type="number" id="wdf" placeholder="WDF">
+                <input type="number" id="fcn" placeholder="FCN">
+                <input type="number" id="maths" placeholder="Maths">
+            </div>
+
+            <button id="addBtn">Add Student</button>
+        </div>
+
+        <p id="error"></p>
+
+        <h2>Student Results</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Total</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="resultTable"></tbody>
+        </table>
+    </main>
+
+    <footer>
+        © 2026 CampusCore Student Portal
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
