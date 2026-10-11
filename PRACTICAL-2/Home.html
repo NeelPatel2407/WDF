@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>CampusCore - Student Portal</title>
     <link rel="stylesheet" href="../PRACTICAL-3/Home.css">
@@ -9,22 +10,22 @@
         let currentPage = 1;
         const recordsPerPage = 5;
 
-                fetch("http://localhost/WDF/PRACTICAL-8/events.php")
-                    .then(response => {
-                    if (!response.ok)
-                        throw new Error("Failed to load events from database");
-                        return response.json();
-                })
+        fetch("http://localhost/WDF/PRACTICAL-8/events.php")
+            .then(response => {
+                if (!response.ok)
+                    throw new Error("Failed to load events from database");
+                return response.json();
+            })
             .then(data => {
-                    events = data;
-                    currentPage = 1;
-                    displayEvents();
-                })
-                .catch(error => {
-                 console.error(error);
-                    document.getElementById("eventList").innerHTML =
-                        "<p>Unable to load event data.</p>";
-             });
+                events = data;
+                currentPage = 1;
+                displayEvents();
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById("eventList").innerHTML =
+                    "<p>Unable to load event data.</p>";
+            });
 
         function displayEvents() {
             const search = document.getElementById("search").value.toLowerCase();
@@ -126,6 +127,7 @@
         <nav>
             <a href="http://localhost/WDF/PRACTICAL-10/login.php">Login</a>
             <a href="http://localhost/WDF/PRACTICAL-9/register.php">Register</a>
+            <a href="http://localhost/WDF/PRACTICAL-11/index.php">Student Management</a>
             <a href="Contactsupport&FAQ.html">Help & FAQ</a>
         </nav>
 
@@ -179,7 +181,8 @@
                     </td>
 
                     <td>
-                        <a href="event_calendar.html">Campus Events</a>
+                        
+                        <a href="http://localhost/WDF/PRACTICAL-12/index.php"> Campus Events</a>
                         <p>See upcoming activities</p>
                     </td>
                 </tr>
@@ -193,6 +196,23 @@
                     <td>
                         <a href="feedback.html">Feedback</a>
                         <p>Submit faculty feedback</p>
+                    </td>
+
+                    <td>
+                        <a href="Contactsupport&FAQ.html">Help & FAQ</a>
+                        <p>Get support and answers</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="http://localhost/WDF/PRACTICAL-11/index.php">Student Management</a>
+                        <p>Search, add, edit and manage student records</p>
+                    </td>
+
+                    <td>
+                        <a href="event_calendar.html">Campus Events</a>
+                        <p>View and explore campus activities</p>
                     </td>
 
                     <td>
@@ -244,7 +264,6 @@
             </table>
         </section>
 
-        <!-- PRACTICAL 6 -->
         <section>
             <h2>Campus Events</h2>
 
