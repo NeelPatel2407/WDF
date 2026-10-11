@@ -1,0 +1,282 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 25px 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)),
+        url("charusat.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.login-table {
+    width: 900px;
+    max-width: 94%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(67, 56, 202, 0.18);
+}
+
+.features {
+    width: 40%;
+    padding: 45px;
+    vertical-align: top;
+    background: linear-gradient(150deg, #4338ca, #6366f1);
+    color: white;
+}
+
+.features h1 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.features p {
+    color: #e0e7ff;
+}
+
+.features hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 25px 0;
+}
+
+.features ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+.login-box {
+    width: 60%;
+    padding: 42px;
+    vertical-align: top;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    color: #4338ca;
+    font-size: 28px;
+}
+
+.login-box > p {
+    color: #64748b;
+}
+
+.login-box nav {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.login-box nav a {
+    color: #4338ca;
+    background: #eef2ff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.login-box nav a:hover {
+    background: #4338ca;
+    color: white;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #475569;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px #e0e7ff;
+}
+
+.login-box label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.login-box input[type="checkbox"] {
+    margin: 0;
+    accent-color: #4338ca;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 7px;
+    background: #f97316;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #ea580c;
+}
+
+.login-box a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+.login-box .error {
+    padding: 11px;
+    margin: 15px 0;
+    border: 1px solid #fecaca;
+    border-radius: 7px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.footer {
+    width: 100%;
+    margin: 18px 0 0;
+    color: #040404;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+.login-container {
+    width: 600px;
+    max-width: 92%;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(67, 56, 202, 0.18);
+}
+
+.login-container header {
+    padding: 25px 35px;
+    background: linear-gradient(150deg, #4338ca, #6366f1);
+    color: white;
+}
+
+.login-container header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.login-container header p {
+    margin: 0;
+    color: #e0e7ff;
+}
+
+.login-container main {
+    padding: 30px 35px;
+}
+
+.login-container main h2 {
+    color: #4338ca;
+    overflow-wrap: anywhere;
+}
+
+.login-container main p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+.login-container main form {
+    margin-top: 22px;
+}
+
+.login-container main button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 7px;
+    background: #f97316;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-container main button:hover {
+    background: #ea580c;
+}
+
+
+@media (max-width: 650px) {
+    body {
+        padding: 18px 0;
+    }
+
+    .login-table,
+    .login-table tbody,
+    .login-table tr {
+        display: block;
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    .features,
+    .login-box {
+        display: block;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .features h1 {
+        font-size: 28px;
+    }
+
+    .login-box h2 {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 0 12px;
+    }
+
+    .login-container {
+        width: 94%;
+    }
+
+    .login-container header,
+    .login-container main {
+        padding: 24px;
+    }
+}
