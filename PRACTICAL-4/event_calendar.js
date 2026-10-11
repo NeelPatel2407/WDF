@@ -1,18 +1,48 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    const eventCells = document.querySelectorAll(".event-table td");
-    const buttons = document.querySelectorAll(".event-table button");
+    const eventRow = document.getElementById("eventRow");
 
-    buttons.forEach(function (button, index) {
+    eventRow.addEventListener("click", function (e) {
 
-        button.addEventListener("click", function () {
+        const cell = e.target.closest("td");
 
-            const event = eventCells[index];
-            const eventName = event.querySelector("h3").textContent;
-            const details = event.querySelectorAll("p");
+        if (!cell || !eventRow.contains(cell)) {
+            return;
+        }
 
-            const date = details[0].textContent.replace("Date :", "").trim();
-            const venue = details[1].textContent.replace("Venue :", "").trim();
+        const title = cell.querySelector("h3");
+
+        if (!title) {
+            return;
+        }
+
+        const eventName = title.textContent;
+        const details = cell.querySelectorAll("p");
+
+        let date = "";
+        let venue = "";
+        let category = "";
+
+        details.forEach(function (detail) {
+            const text = detail.textContent;
+
+            if (text.startsWith("Date :")) {
+                date = text.replace("Date :", "").trim();
+            } else if (text.startsWith("Venue :")) {
+                venue = text.replace("Venue :", "").trim();
+            } else if (text.startsWith("Category :")) {
+                category = text.replace("Category :", "").trim();
+            }
+        });
+
+        if (e.target.tagName === "BUTTON") {
+
+            const button = e.target;
+
+            if (button.disabled) {
+                return;
+            }
 
             const choice = confirm(
                 "Event: " + eventName + "\n" +
@@ -22,36 +52,56 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             if (choice) {
-                button.textContent = "Registered";
+
+                if (!cell.dataset.eventId) {
+                    alert("Event ID not found. Please refresh the page.");
+                    return;
+                }
+
                 button.disabled = true;
+                button.textContent = "Registering...";
 
-                alert(
-                    "Registration Successful!\n\n" +
-                    "You have registered for " + eventName + "."
-                );
+                const formData = new URLSearchParams();
+                formData.append("event_id", cell.dataset.eventId);
+                formData.append("email", "neel@example.com");
+
+                fetch("http://localhost/WDF/PRACTICAL-8/register_event.php", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(async function (response) {
+                        const data = await response.json();
+
+                        if (!response.ok || !data.success) {
+                            throw new Error(
+                                data.message || "Registration failed."
+                            );
+                        }
+
+                        button.textContent = "Registered";
+
+                        alert(
+                            "Registration Successful!\n\n" +
+                            "You have registered for " + eventName + "."
+                        );
+                    })
+                    .catch(function (error) {
+                        button.disabled = false;
+                        button.textContent = "Participate";
+                        alert(error.message);
+                    });
             }
-        });
 
-    });
+            return;
+        }
 
-    eventCells.forEach(function (cell) {
-
-        cell.addEventListener("click", function (event) {
-
-            if (event.target.tagName === "BUTTON") {
-                return;
-            }
-
-            const eventName = cell.querySelector("h3").textContent;
-            const details = cell.querySelectorAll("p");
-
-            alert(
-                "Event Details\n\n" +
-                eventName + "\n" +
-                details[0].textContent + "\n" +
-                details[1].textContent
-            );
-        });
+        alert(
+            "Event Details\n\n" +
+            eventName + "\n" +
+            "Date: " + date + "\n" +
+            "Venue: " + venue + "\n" +
+            "Category: " + category
+        );
 
     });
 

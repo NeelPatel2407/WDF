@@ -9,20 +9,22 @@
         let currentPage = 1;
         const recordsPerPage = 5;
 
-        fetch("../PRACTICAL-6/events.json")
-            .then(response => {
-                if (!response.ok)
-                    throw new Error("Failed to load JSON");
-                return response.json();
-            })
+                fetch("http://localhost/WDF/PRACTICAL-8/events.php")
+                    .then(response => {
+                    if (!response.ok)
+                        throw new Error("Failed to load events from database");
+                        return response.json();
+                })
             .then(data => {
-                events = data;
-                displayEvents();
-            })
-            .catch(error => {
-                document.getElementById("eventList").innerHTML =
-                    "<p>Unable to load event data.</p>";
-            });
+                    events = data;
+                    currentPage = 1;
+                    displayEvents();
+                })
+                .catch(error => {
+                 console.error(error);
+                    document.getElementById("eventList").innerHTML =
+                        "<p>Unable to load event data.</p>";
+             });
 
         function displayEvents() {
             const search = document.getElementById("search").value.toLowerCase();
@@ -122,8 +124,8 @@
         <p>CHARUSAT Student Portal</p>
 
         <nav>
-            <a href="login.html">Login</a>
-            <a href="http://localhost/WDF/PRACTICAL-7/registration.php">Register</a>
+            <a href="http://localhost/WDF/PRACTICAL-10/login.php">Login</a>
+            <a href="http://localhost/WDF/PRACTICAL-9/register.php">Register</a>
             <a href="Contactsupport&FAQ.html">Help & FAQ</a>
         </nav>
 
