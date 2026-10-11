@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: Arial, sans-serif;
+    color: #334155;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    background: white;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(15,23,42,.12);
+}
+
+header {
+    padding: 25px 30px;
+    background: #075985;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 6px;
+    font-size: 27px;
+}
+
+header p {
+    margin: 0;
+    color: #bae6fd;
+    font-size: 14px;
+}
+
+main {
+    padding: 30px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #075985;
+}
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 6px;
+    background: #0284c7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0369a1;
+}
+
+.error {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    color: #dc2626;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+}
+
+.result h2 {
+    font-size: 19px;
+}
+
+.result p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.result a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 9px 15px;
+    border-radius: 6px;
+    background: #0284c7;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.result a:hover {
+    background: #0369a1;
+}
+
+footer {
+    padding: 15px;
+    text-align: center;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 12px;
+}
