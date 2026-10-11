@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #334155;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)),
+        url("charusat.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 30px 38px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(67, 56, 202, 0.15);
+}
+
+h1 {
+    margin: 0 0 10px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    background: linear-gradient(120deg, #4338ca, #7c3aed);
+    border-radius: 10px;
+}
+
+.container > p {
+    text-align: center;
+    margin: 7px 0 25px;
+    color: #000000;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+    padding: 22px;
+    background: #f8faff;
+    border: 1px solid #dbe4ff;
+    border-radius: 11px;
+}
+
+input {
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+form input:not([type="hidden"]) {
+    flex: 1;
+    min-width: 180px;
+}
+
+button {
+    padding: 11px 16px;
+    margin: 2px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: .2s;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+#cancelBtn {
+    background: #64748b;
+}
+
+#cancelBtn:hover {
+    background: #475569;
+}
+
+.admin-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0;
+    color: #334155;
+    font-size: 18px;
+}
+
+.logout-form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 10px 32px;
+    margin: 0;
+    border: 2px solid #8b7bea;
+    border-radius: 16px;
+    background: transparent;
+    color: #4338ca;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.logout-btn:hover {
+    background: #4338ca;
+    border-color: #4338ca;
+    color: #ffffff;
+}
+
+#search {
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 12px 14px;
+}
+
+#message {
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+#message:empty {
+    display: none;
+}
+
+#message.success {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #dcfce7;
+    color: #15803d;
+}
+
+#message.error {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #dbe4ff;
+    border-radius: 10px;
+    background: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    padding: 14px 16px;
+    text-align: left;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+tbody tr:nth-child(even) {
+    background: #fafbff;
+}
+
+tbody tr:hover {
+    background: #f1f5ff;
+}
+
+td button {
+    margin: 3px;
+}
+
+td button:last-child {
+    background: #ef4444;
+}
+
+td button:last-child:hover {
+    background: #dc2626;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 94%;
+        margin: 18px auto;
+        padding: 24px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    form {
+        padding: 16px;
+    }
+
+    form input:not([type="hidden"]) {
+        min-width: 100%;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 18px 12px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container > p {
+        font-size: 14px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input:not([type="hidden"]),
+    form button {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .admin-bar {
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .logout-btn {
+        padding: 9px 24px;
+        font-size: 16px;
+    }
+
+    td button {
+        padding: 8px 10px;
+        margin: 2px 0;
+    }
+}
