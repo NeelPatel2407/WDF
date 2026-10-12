@@ -23,9 +23,9 @@
         <h2>Create Student Account</h2>
 
         <nav>
-            <a href="http://127.0.0.1:5500/PRACTICAL-2/Home.html">Home</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-02/Home.html">Home</a>
             <a href="http://localhost/WDF/PRACTICAL-10/login.php">Login</a>
-            <a href="http://127.0.0.1:5500/PRACTICAL-2/Contactsupport%26FAQ.html">Help & FAQ</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-02/Contactsupport%26FAQ.html">Help & FAQ</a>
         </nav>
 
         <br>
