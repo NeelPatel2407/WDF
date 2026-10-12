@@ -60,15 +60,15 @@ $categories = $conn->query(
     <h2>CampusCore</h2>
 
     <nav>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/dashboard.html">Dashboard</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/profile.html">Profile</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/course_registration.html">Courses</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/exam_schedule.html">Exams</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/fees_payment.html">Fees</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/about_faculty.html">Faculty</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/feedback.html">Feedback</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/Contactsupport%26FAQ.html">Help &amp; FAQ</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-2/Home.html">Logout</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/dashboard.html">Dashboard</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/profile.html">Profile</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/course_registration.html">Courses</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/exam_schedule.html">Exams</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/fees_payment.html">Fees</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/about_faculty.html">Faculty</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/feedback.html">Feedback</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/Contactsupport%26FAQ.html">Help &amp; FAQ</a>
+        <a href="http://127.0.0.1:5500/PRACTICAL-02/Home.html">Logout</a>
     </nav>
 </div>
 
