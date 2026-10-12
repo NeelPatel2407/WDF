@@ -62,7 +62,7 @@ $message = $_GET["message"] ?? "";
 
         <div class="top-actions">
             <a class="button"
-               href="http://127.0.0.1:5500/PRACTICAL-2/Home.html">
+               href="http://127.0.0.1:5500/PRACTICAL-02/Home.html">
                 Home
             </a>
 
