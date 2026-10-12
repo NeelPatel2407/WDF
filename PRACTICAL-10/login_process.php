@@ -57,7 +57,7 @@ $conn->close();
 if ($user["role"] === "admin") {
     header("Location: admin_dashboard.php");
 } elseif ($user["role"] === "student") {
-    header("Location: http://127.0.0.1:5500/PRACTICAL-2/dashboard.html");
+    header("Location: http://127.0.0.1:5500/PRACTICAL-02/dashboard.html");
 } else {
     $_SESSION["login_error"] = "Invalid account role.";
     header("Location: login.php");
