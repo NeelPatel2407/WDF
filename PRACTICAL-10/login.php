@@ -48,9 +48,9 @@ unset($_SESSION["login_error"]);
             <p>Sign in to access your student account.</p>
 
             <nav>
-                <a href="http://127.0.0.1:5500/PRACTICAL-02/Home.html">Home</a>
-                <a href="../PRACTICAL-09/register.php">Register</a>
-                <a href="http://127.0.0.1:5500/PRACTICAL-02/Contactsupport%26FAQ.html">Help & FAQ</a>
+                <a href="http://127.0.0.1:5500/PRACTICAL-2/Home.html">Home</a>
+                <a href="../PRACTICAL-9/register.php">Register</a>
+                <a href="http://127.0.0.1:5500/PRACTICAL-2/Contactsupport%26FAQ.html">Help & FAQ</a>
             </nav>
 
             <?php if ($error !== ""): ?>
@@ -98,13 +98,13 @@ unset($_SESSION["login_error"]);
 
             <br>
 
-            <a href="http://127.0.0.1:5500/PRACTICAL-02/Forgot_Password.html">Forgot Password?</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/Forgot_Password.html">Forgot Password?</a>
 
             <br><br>
 
             <p>
                 New student?
-                <a href="../PRACTICAL-09/register.php">Register</a>
+                <a href="../PRACTICAL-9/register.php">Register</a>
             </p>
         </td>
     </tr>
@@ -114,6 +114,6 @@ unset($_SESSION["login_error"]);
     © 2026 Charotar University of Science & Technology. All Rights Reserved
 </p>
 
-<script src="../PRACTICAL-04/login.js"></script>
+<script src="../PRACTICAL-4/login.js"></script>
 </body>
 </html>

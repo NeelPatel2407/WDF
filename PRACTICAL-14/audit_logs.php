@@ -13,7 +13,7 @@ $conn->set_charset("utf8mb4");
 $result = $conn->query(
     "SELECT id, user_id, action, details, ip_address, created_at
      FROM audit_logs
-     ORDER BY id DESC
+     ORDER BY id ASC
      LIMIT 100"
 );
 ?>
@@ -33,7 +33,6 @@ $result = $conn->query(
 
     <nav>
         <a href="dashboard.php">Dashboard</a>
-        <a href="audit_logs.php">Audit Logs</a>
         <a href="../PRACTICAL-10/logout.php">Logout</a>
     </nav>
 </header>

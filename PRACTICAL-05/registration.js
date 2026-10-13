@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("registrationForm");
@@ -27,8 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function check(input, pattern, msg) {
-        if (!input.value.trim()) return error(input, "This field is required.");
-        if (!pattern.test(input.value.trim())) return error(input, msg);
+        if (!input.value.trim())
+            return error(input, "This field is required.");
+
+        if (!pattern.test(input.value.trim()))
+            return error(input, msg);
+
         return ok(input);
     }
 
@@ -36,14 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
         let p = pass.value;
 
         if (!p) return error(pass, "Password is required.");
+
         if (p.length < 8 || p.length > 16)
             return error(pass, "Password must be 8-16 characters.");
+
         if (!/[A-Z]/.test(p))
             return error(pass, "Add an uppercase letter.");
+
         if (!/[a-z]/.test(p))
             return error(pass, "Add a lowercase letter.");
+
         if (!/[0-9]/.test(p))
             return error(pass, "Add a number.");
+
         if (!/[!@#$%^&*]/.test(p))
             return error(pass, "Add a special character.");
 
@@ -51,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function strength() {
-        let p = pass.value, score = 0;
+        let p = pass.value;
+        let score = 0;
 
         if (p.length >= 8) score++;
         if (/[A-Z]/.test(p)) score++;
@@ -63,8 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const bar = document.getElementById("strengthBar");
         const text = document.getElementById("strengthText");
 
-        bar.style.width = p ? (score <= 2 ? "30%" : score <= 4 ? "65%" : "100%") : "0%";
-        text.textContent = p ? (score <= 2 ? "Weak" : score <= 4 ? "Medium" : "Strong") : "";
+        bar.style.width = p
+            ? (score <= 2 ? "30%" : score <= 4 ? "65%" : "100%")
+            : "0%";
+
+        text.textContent = p
+            ? (score <= 2 ? "Weak" : score <= 4 ? "Medium" : "Strong")
+            : "";
     }
 
     function selectCheck(input, msg) {
@@ -72,16 +88,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function genderCheck() {
-        let gender = document.querySelector('input[name="gender"]:checked');
+        const gender = document.querySelector(
+            'input[name="gender"]:checked'
+        );
+
         document.getElementById("genderError").textContent =
             gender ? "" : "Please select your gender.";
+
         return !!gender;
     }
 
     function termsCheck() {
         document.getElementById("termsError").textContent =
             terms.checked ? "" : "You must accept the Terms and Conditions.";
+
         return terms.checked;
+    }
+
+    function confirmCheck() {
+        if (!confirm.value)
+            return error(confirm, "Please confirm your password.");
+
+        if (confirm.value !== pass.value)
+            return error(confirm, "Passwords do not match.");
+
+        return ok(confirm);
     }
 
     id.addEventListener("input", () =>
@@ -107,15 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
     pass.addEventListener("input", () => {
         strength();
         passwordCheck();
-        if (confirm.value) confirmCheck();
-    });
 
-    function confirmCheck() {
-        if (!confirm.value) return error(confirm, "Please confirm your password.");
-        if (confirm.value !== pass.value)
-            return error(confirm, "Passwords do not match.");
-        return ok(confirm);
-    }
+        if (confirm.value) {
+            confirmCheck();
+        }
+    });
 
     confirm.addEventListener("input", confirmCheck);
 
@@ -127,9 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
         selectCheck(year, "Please select your year.")
     );
 
-    document.querySelectorAll('input[name="gender"]').forEach(x =>
-        x.addEventListener("change", genderCheck)
-    );
+    document.querySelectorAll('input[name="gender"]').forEach(input => {
+        input.addEventListener("change", genderCheck);
+    });
 
     terms.addEventListener("change", termsCheck);
 
@@ -152,22 +179,30 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valid) {
             localStorage.setItem("registeredStudentId", id.value.trim());
             localStorage.setItem("registeredPassword", pass.value);
-            localStorage.setItem("registeredName", first.value.trim() + " " + last.value.trim());
+            localStorage.setItem(
+                "registeredName",
+                first.value.trim() + " " + last.value.trim()
+            );
 
             document.getElementById("successMessage").textContent =
                 "Registration successful! Redirecting to Login...";
 
             alert("Registration Successful!");
-            window.location.href = "../PRACTICAL-2/login.html";
+
+            window.location.href = "../PRACTICAL-02/login.html";
         }
     });
 
     form.addEventListener("reset", () => {
         setTimeout(() => {
-            document.querySelectorAll(".error").forEach(x => x.textContent = "");
-            document.querySelectorAll("input,select").forEach(x =>
-                x.classList.remove("input-error", "input-success")
-            );
+            document.querySelectorAll(".error").forEach(input => {
+                input.textContent = "";
+            });
+
+            document.querySelectorAll("input, select").forEach(input => {
+                input.classList.remove("input-error", "input-success");
+            });
+
             document.getElementById("strengthBar").style.width = "0%";
             document.getElementById("strengthText").textContent = "";
             document.getElementById("successMessage").textContent = "";

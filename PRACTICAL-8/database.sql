@@ -37,8 +37,8 @@ CREATE TABLE IF NOT EXISTS registrations (
 
 INSERT IGNORE INTO students (name, email, phone, course)
 VALUES
-('Neel Patel', 'neel@example.com', '9876543210', 'CSE'),
-('Rahul Shah', 'rahul@example.com', '9876543211', 'IT');
+('Neel Patel', '25dcs093@charusat.edu.in', '9726138765', 'CSE'),
+('Kavy Patel', '25dcs001@charusat.edu.in', '9876543210', 'IT');
 
 INSERT INTO events (event_name, event_date, venue, description)
 SELECT 'Tech Fest', '2026-11-15', 'CHARUSAT Campus',

@@ -42,6 +42,10 @@ function recordAction(
     $userId = (int) ($_SESSION["user_id"] ?? 0);
     $ip = $_SERVER["REMOTE_ADDR"] ?? "";
 
+    if ($ip === "::1") {
+        $ip = "172.0.0.1";
+    }
+
     $stmt = $conn->prepare(
         "INSERT INTO audit_logs
          (user_id, action, details, ip_address)
@@ -56,6 +60,7 @@ function recordAction(
             $details,
             $ip
         );
+
         $stmt->execute();
         $stmt->close();
     }
@@ -65,7 +70,7 @@ if (empty($_SESSION["dashboard_opened"])) {
     recordAction(
         $auditDB,
         "Dashboard opened",
-        "Admin opened the Practical 14 dashboard."
+        "Admin opened the dashboard."
     );
 
     $_SESSION["dashboard_opened"] = true;
@@ -76,6 +81,8 @@ $userDB = new mysqli("localhost", "root", "", "practical9");
 if ($userDB->connect_error) {
     die("User database connection failed.");
 }
+
+$userDB->set_charset("utf8mb4");
 
 $userCount = getCount($userDB, "users");
 $studentCount = getCount($conn, "students");
@@ -106,10 +113,13 @@ $role = $_SESSION["role"] ?? "user";
     <h2>CampusCore Admin</h2>
 
     <nav>
-        <a href="dashboard.php">Dashboard</a>
 
         <a href="../PRACTICAL-13/index.php">
-            Student Management
+            Student Management(API)
+        </a>
+
+        <a href="../PRACTICAL-12/index.php">
+            Event Management
         </a>
 
         <?php if ($role === "admin"): ?>

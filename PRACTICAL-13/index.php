@@ -2,6 +2,7 @@
 require_once __DIR__ . "/../PRACTICAL-10/auth.php";
 requireRole("admin");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +10,74 @@ requireRole("admin");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management - Practical 13</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .admin-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .admin-bar > span {
+            font-size: 18px;
+        }
+
+        .admin-bar a,
+        .admin-bar button {
+            display: inline-block;
+            padding: 11px 22px;
+            border: 2px solid #8172ff;
+            border-radius: 15px;
+            background: white;
+            color: #4f46e5;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .admin-bar a:hover {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .admin-bar .logout-btn {
+            background: white;
+            color: #4f46e5;
+        }
+
+        .admin-bar .logout-btn:hover {
+            background: #ef4444;
+            border-color: #ef4444;
+            color: white;
+        }
+
+        .logout-form {
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
+
         <h1>Student Management</h1>
         <p>PHP JSON API and Fetch-Based CRUD</p>
 
         <div class="admin-bar">
             <span>Welcome, Admin!</span>
-            <form action="../PRACTICAL-10/logout.php" method="POST" class="logout-form">
-                <button type="submit" class="logout-btn">Logout</button>
+
+            <a href="../PRACTICAL-14/dashboard.php">
+                Dashboard
+            </a>
+
+            <form action="../PRACTICAL-10/logout.php"
+                  method="POST"
+                  class="logout-form">
+                <button type="submit" class="logout-btn">
+                    Logout
+                </button>
             </form>
         </div>
 
@@ -50,6 +109,7 @@ requireRole("admin");
                 </tbody>
             </table>
         </div>
+
     </div>
 
     <script>

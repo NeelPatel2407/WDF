@@ -1,16 +1,28 @@
-
 <?php
+session_start();
 require_once "db.php";
 
-$search = trim($_GET['search'] ?? '');
-$category = $_GET['category'] ?? '';
-$status = $_GET['status'] ?? '';
+if (
+    !isset($_SESSION["user_id"], $_SESSION["role"]) ||
+    !in_array($_SESSION["role"], ["admin", "student"], true)
+) {
+    header("Location: http://localhost/WDF/PRACTICAL-10/login.php");
+    exit;
+}
+
+$role = $_SESSION["role"];
+$isAdmin = $role === "admin";
+$isStudent = $role === "student";
+
+$search = trim($_GET["search"] ?? "");
+$category = $_GET["category"] ?? "";
+$status = $_GET["status"] ?? "";
 
 $sql = "SELECT * FROM events WHERE 1=1";
 $params = [];
 $types = "";
 
-if ($search !== '') {
+if ($search !== "") {
     $sql .= " AND (title LIKE ? OR description LIKE ?)";
     $value = "%$search%";
     $params[] = $value;
@@ -18,13 +30,13 @@ if ($search !== '') {
     $types .= "ss";
 }
 
-if ($category !== '') {
+if ($category !== "") {
     $sql .= " AND category = ?";
     $params[] = $category;
     $types .= "s";
 }
 
-if ($status !== '') {
+if ($status !== "") {
     $sql .= " AND status = ?";
     $params[] = $status;
     $types .= "s";
@@ -60,15 +72,22 @@ $categories = $conn->query(
     <h2>CampusCore</h2>
 
     <nav>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/dashboard.html">Dashboard</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/profile.html">Profile</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/course_registration.html">Courses</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/exam_schedule.html">Exams</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/fees_payment.html">Fees</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/about_faculty.html">Faculty</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/feedback.html">Feedback</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/Contactsupport%26FAQ.html">Help &amp; FAQ</a>
-        <a href="http://127.0.0.1:5500/PRACTICAL-02/Home.html">Logout</a>
+        <?php if ($isAdmin): ?>
+            <a href="http://localhost/WDF/PRACTICAL-14/dashboard.php">
+                Dashboard
+            </a>
+        <?php else: ?>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/dashboard.html">Dashboard</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/profile.html">Profile</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/course_registration.html">Courses</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/exam_schedule.html">Exams</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/fees_payment.html">Fees</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/about_faculty.html">Faculty</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/feedback.html">Feedback</a>
+            <a href="http://127.0.0.1:5500/PRACTICAL-2/Contactsupport%26FAQ.html">Help &amp; FAQ</a>
+        <?php endif; ?>
+
+        <a href="http://localhost/WDF/PRACTICAL-10/logout.php">Logout</a>
     </nav>
 </div>
 
@@ -76,9 +95,9 @@ $categories = $conn->query(
 
     <h1>Upcoming Campus Events</h1>
 
-    <?php if (isset($_GET['message'])): ?>
+    <?php if (isset($_GET["message"])): ?>
         <div class="message">
-            <?= htmlspecialchars($_GET['message'], ENT_QUOTES, 'UTF-8') ?>
+            <?= htmlspecialchars($_GET["message"], ENT_QUOTES, "UTF-8") ?>
         </div>
     <?php endif; ?>
 
@@ -87,7 +106,7 @@ $categories = $conn->query(
             type="text"
             name="search"
             placeholder="Search events..."
-            value="<?= htmlspecialchars($search, ENT_QUOTES, 'UTF-8') ?>"
+            value="<?= htmlspecialchars($search, ENT_QUOTES, "UTF-8") ?>"
         >
 
         <select name="category">
@@ -95,27 +114,29 @@ $categories = $conn->query(
 
             <?php while ($row = $categories->fetch_assoc()): ?>
                 <option
-                    value="<?= htmlspecialchars($row['category'], ENT_QUOTES, 'UTF-8') ?>"
-                    <?= $category === $row['category'] ? 'selected' : '' ?>
+                    value="<?= htmlspecialchars($row["category"], ENT_QUOTES, "UTF-8") ?>"
+                    <?= $category === $row["category"] ? "selected" : "" ?>
                 >
-                    <?= htmlspecialchars($row['category'], ENT_QUOTES, 'UTF-8') ?>
+                    <?= htmlspecialchars($row["category"], ENT_QUOTES, "UTF-8") ?>
                 </option>
             <?php endwhile; ?>
         </select>
 
         <select name="status">
             <option value="">All Statuses</option>
-            <option value="Open" <?= $status === 'Open' ? 'selected' : '' ?>>Open</option>
-            <option value="Closed" <?= $status === 'Closed' ? 'selected' : '' ?>>Closed</option>
+            <option value="Open" <?= $status === "Open" ? "selected" : "" ?>>Open</option>
+            <option value="Closed" <?= $status === "Closed" ? "selected" : "" ?>>Closed</option>
         </select>
 
         <button type="submit">Search</button>
         <a class="reset" href="index.php">Reset</a>
     </form>
 
-    <div class="actions">
-        <a class="button" href="add.php">+ Add Event</a>
-    </div>
+    <?php if ($isAdmin): ?>
+        <div class="actions">
+            <a class="button" href="add.php">+ Add Event</a>
+        </div>
+    <?php endif; ?>
 
     <div class="event-list">
 
@@ -125,71 +146,75 @@ $categories = $conn->query(
 
                 <div class="event-card">
 
-                    <?php if (!empty($event['poster'])): ?>
+                    <?php if (!empty($event["poster"])): ?>
                         <img
                             class="poster"
-                            src="uploads/<?= rawurlencode(basename($event['poster'])) ?>"
-                            alt="<?= htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8') ?>"
+                            src="uploads/<?= rawurlencode(basename($event["poster"])) ?>"
+                            alt="<?= htmlspecialchars($event["title"], ENT_QUOTES, "UTF-8") ?>"
                         >
                     <?php endif; ?>
 
                     <div class="event-info">
 
-                        <h2><?= htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8') ?></h2>
+                        <h2><?= htmlspecialchars($event["title"], ENT_QUOTES, "UTF-8") ?></h2>
 
                         <p>
                             <strong>Date:</strong>
-                            <?= date('d M Y', strtotime($event['event_date'])) ?>
+                            <?= date("d M Y", strtotime($event["event_date"])) ?>
                         </p>
 
                         <p>
                             <strong>Venue:</strong>
-                            <?= htmlspecialchars($event['venue'] ?? 'Campus', ENT_QUOTES, 'UTF-8') ?>
+                            <?= htmlspecialchars($event["venue"] ?? "Campus", ENT_QUOTES, "UTF-8") ?>
                         </p>
 
                         <p>
                             <strong>Category:</strong>
-                            <?= htmlspecialchars($event['category'], ENT_QUOTES, 'UTF-8') ?>
+                            <?= htmlspecialchars($event["category"], ENT_QUOTES, "UTF-8") ?>
                         </p>
 
                         <p>
                             <strong>Status:</strong>
-                            <span class="<?= $event['status'] === 'Open' ? 'open' : 'closed' ?>">
-                                <?= htmlspecialchars($event['status'], ENT_QUOTES, 'UTF-8') ?>
+                            <span class="<?= $event["status"] === "Open" ? "open" : "closed" ?>">
+                                <?= htmlspecialchars($event["status"], ENT_QUOTES, "UTF-8") ?>
                             </span>
                         </p>
 
                         <p>
-                            <?= nl2br(htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8')) ?>
+                            <?= nl2br(htmlspecialchars($event["description"], ENT_QUOTES, "UTF-8")) ?>
                         </p>
 
-                        <?php if ($event['status'] === 'Open'): ?>
-                            <a
-                                href="participate.php?id=<?= (int)$event['id'] ?>"
-                                class="participate-btn"
-                            >Participate</a>
-                        <?php else: ?>
-                            <button type="button" class="participate-btn" disabled>
-                                Registration Closed
-                            </button>
+                        <?php if ($isStudent): ?>
+                            <?php if ($event["status"] === "Open"): ?>
+                                <a
+                                    href="participate.php?id=<?= (int) $event["id"] ?>"
+                                    class="participate-btn"
+                                >Participate</a>
+                            <?php else: ?>
+                                <button type="button" class="participate-btn" disabled>
+                                    Registration Closed
+                                </button>
+                            <?php endif; ?>
                         <?php endif; ?>
 
-                        <div class="event-actions">
-                            <a href="edit.php?id=<?= (int)$event['id'] ?>">Edit</a>
+                        <?php if ($isAdmin): ?>
+                            <div class="event-actions">
+                                <a href="edit.php?id=<?= (int) $event["id"] ?>">Edit</a>
 
-                            <form
-                                action="delete.php"
-                                method="POST"
-                                onsubmit="return confirm('Are you sure you want to delete this event?')"
-                            >
-                                <input
-                                    type="hidden"
-                                    name="id"
-                                    value="<?= (int)$event['id'] ?>"
+                                <form
+                                    action="delete.php"
+                                    method="POST"
+                                    onsubmit="return confirm('Are you sure you want to delete this event?')"
                                 >
-                                <button type="submit">Delete</button>
-                            </form>
-                        </div>
+                                    <input
+                                        type="hidden"
+                                        name="id"
+                                        value="<?= (int) $event["id"] ?>"
+                                    >
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </div>
+                        <?php endif; ?>
 
                     </div>
                 </div>

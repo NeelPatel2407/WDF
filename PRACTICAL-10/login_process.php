@@ -1,8 +1,6 @@
-
 <?php
-session_start();
-
-require_once "db.php";
+require_once __DIR__ . "/auth.php";
+require_once __DIR__ . "/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: login.php");
@@ -52,16 +50,11 @@ $_SESSION["last_activity"] = time();
 $stmt->close();
 $conn->close();
 
-
-
 if ($user["role"] === "admin") {
-    header("Location: admin_dashboard.php");
-} elseif ($user["role"] === "student") {
-    header("Location: http://127.0.0.1:5500/PRACTICAL-02/dashboard.html");
+    header("Location: ../PRACTICAL-14/dashboard.php");
 } else {
-    $_SESSION["login_error"] = "Invalid account role.";
-    header("Location: login.php");
+    header("Location: http://127.0.0.1:5500/PRACTICAL-2/dashboard.html");
 }
-exit;
 
+exit;
 ?>

@@ -20,6 +20,6 @@ if (ini_get("session.use_cookies")) {
 
 session_destroy();
 
-header("Location: http://127.0.0.1:5500/PRACTICAL-02/Home.html");
+header("Location: http://127.0.0.1:5500/PRACTICAL-2/Home.html");
 exit;
 ?>

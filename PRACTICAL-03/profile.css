@@ -4,8 +4,10 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
     background-image:
-        linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), url("charusat.png");
+        linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
+        url("charusat.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -15,39 +17,49 @@ body {
 }
 
 .topbar {
+    width: 90%;
+    max-width: 1650px;
+    margin: 0 auto;
     background: #075985;
     padding: 18px 6%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .topbar h2 {
     color: white;
     margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-nav {
+.topbar nav {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 9px;
 }
 
-nav a {
+.topbar nav a {
     color: white;
     text-decoration: none;
     padding: 9px 16px;
     border: 1px solid rgba(255,255,255,.4);
     border-radius: 8px;
     font-size: 14px;
+    white-space: nowrap;
     transition: .2s;
 }
 
-nav a:hover {
+.topbar nav a:hover {
     background: white;
     color: #4f46e5;
 }
+
 body > h1 {
     width: 850px;
     max-width: 90%;
@@ -58,7 +70,7 @@ body > h1 {
 .profile-table {
     width: 850px;
     max-width: 90%;
-    margin: auto;
+    margin: 0 auto;
     border-collapse: collapse;
     background: white;
     box-shadow: 0 7px 22px rgba(15,23,42,.08);
@@ -90,6 +102,7 @@ body > h1 {
     border-radius: 6px;
     background: #0284c7;
     color: white;
+    cursor: pointer;
 }
 
 .label {
@@ -128,6 +141,7 @@ body > h1 {
     border-radius: 6px;
     background: #0284c7;
     color: white;
+    cursor: pointer;
 }
 
 .buttons button[type="reset"] {
